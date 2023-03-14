@@ -114,6 +114,7 @@ struct cypher_astnode_vts
     const struct cypher_astnode_vt *true_literal;
     const struct cypher_astnode_vt *false_literal;
     const struct cypher_astnode_vt *null_literal;
+    const struct cypher_astnode_vt *nan_literal;
     const struct cypher_astnode_vt *label;
     const struct cypher_astnode_vt *reltype;
     const struct cypher_astnode_vt *prop_name;
@@ -232,6 +233,7 @@ static const struct cypher_astnode_vts cypher_astnode_vts =
     .true_literal = &cypher_true_astnode_vt,
     .false_literal = &cypher_false_astnode_vt,
     .null_literal = &cypher_null_astnode_vt,
+    .nan_literal = &cypher_nan_astnode_vt,
     .label = &cypher_label_astnode_vt,
     .reltype = &cypher_reltype_astnode_vt,
     .prop_name = &cypher_prop_name_astnode_vt,
@@ -361,6 +363,7 @@ const uint8_t CYPHER_AST_BOOLEAN = VT_OFFSET(boolean_literal);
 const uint8_t CYPHER_AST_TRUE = VT_OFFSET(true_literal);
 const uint8_t CYPHER_AST_FALSE = VT_OFFSET(false_literal);
 const uint8_t CYPHER_AST_NULL = VT_OFFSET(null_literal);
+const uint8_t CYPHER_AST_NAN = VT_OFFSET(nan_literal);
 const uint8_t CYPHER_AST_LABEL = VT_OFFSET(label);
 const uint8_t CYPHER_AST_RELTYPE = VT_OFFSET(reltype);
 const uint8_t CYPHER_AST_PROP_NAME = VT_OFFSET(prop_name);
