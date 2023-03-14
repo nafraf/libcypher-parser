@@ -44,6 +44,7 @@ libcypher_parser_la_SOURCES = \
 	ast_function_name.c \
 	ast_identifier.c \
 	ast_index_name.c \
+	ast_inf.c \
 	ast_integer.c \
 	ast_label.c \
 	ast_labels_operator.c \
