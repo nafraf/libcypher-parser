@@ -548,8 +548,8 @@ cypher_astnode_t *cypher_ast_statement(cypher_astnode_t * const *options,
  * @return A `CYPHER_AST_QUERY` or `CYPHER_AST_SCHEMA_COMMAND` node.
  */
 __cypherlang_pure
-void cypher_ast_statement_set_body(
-        cypher_astnode_t *astnode, const cypher_astnode_t *body);
+void cypher_ast_statement_set_body(cypher_astnode_t *astnode,
+        const cypher_astnode_t *body);
 
 /**
  * Get the number of options in a `CYPHER_AST_STATEMENT` node.
