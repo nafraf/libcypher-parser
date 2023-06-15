@@ -84,6 +84,7 @@ void cypher_ast_statement_set_body
 )
 {
     REQUIRE_TYPE(astnode, CYPHER_AST_STATEMENT, NULL);
+    REQUIRE_TYPE(body, CYPHER_AST_QUERY, NULL);
     struct statement *node = container_of(astnode, struct statement, _astnode);
     astnode->children[0] = body;
     node->body = body;

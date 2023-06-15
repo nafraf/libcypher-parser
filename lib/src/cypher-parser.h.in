@@ -547,7 +547,6 @@ cypher_astnode_t *cypher_ast_statement(cypher_astnode_t * const *options,
  * @param [body] The new body of the statement
  * @return A `CYPHER_AST_QUERY` or `CYPHER_AST_SCHEMA_COMMAND` node.
  */
-__cypherlang_pure
 void cypher_ast_statement_set_body(cypher_astnode_t *astnode,
         const cypher_astnode_t *body);
 
