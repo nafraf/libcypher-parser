@@ -105,7 +105,7 @@ cypher_astnode_t *clone(const cypher_astnode_t *self,
     REQUIRE_TYPE(self, CYPHER_AST_CALL_SUBQUERY, NULL);
 
     cypher_astnode_t *clone = cypher_ast_call_subquery(
-            cypher_ast_clone(children[0]), self->range);
+            children[0], self->range);
     int errsv = errno;
     errno = errsv;
     return clone;
