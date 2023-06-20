@@ -93,7 +93,7 @@ void cypher_ast_call_subquery_replace_query
     struct call_subquery *node =
             container_of(astnode, struct call_subquery, _astnode);
     if (node->query != NULL) {
-        cypher_astnode_free(node->query);
+        cypher_ast_free(node->query);
     }
     astnode->children[0] = query;
     node->query = query;
