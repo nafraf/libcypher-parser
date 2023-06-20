@@ -538,7 +538,7 @@ cypher_astnode_t *cypher_ast_statement(cypher_astnode_t * const *options,
         struct cypher_input_range range);
 
 /**
- * Set the body of a `CYPHER_AST_STATEMENT` node.
+ * Replace the body of a `CYPHER_AST_STATEMENT` node.
  *
  * If the node is not an instance of `CYPHER_AST_STATEMENT` then the result will
  * be undefined.
@@ -547,7 +547,7 @@ cypher_astnode_t *cypher_ast_statement(cypher_astnode_t * const *options,
  * @param [body] The new body of the statement
  * @return A `CYPHER_AST_QUERY` or `CYPHER_AST_SCHEMA_COMMAND` node.
  */
-void cypher_ast_statement_set_body(cypher_astnode_t *astnode,
+void cypher_ast_statement_replace_body(cypher_astnode_t *astnode,
         const cypher_astnode_t *body);
 
 /**
