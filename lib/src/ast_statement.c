@@ -77,6 +77,21 @@ cleanup:
 }
 
 
+void cypher_ast_statement_replace_body
+(
+    cypher_astnode_t *astnode,
+    const cypher_astnode_t *body
+)
+{
+    REQUIRE_TYPE(astnode, CYPHER_AST_STATEMENT, NULL);
+    REQUIRE_TYPE(body, CYPHER_AST_QUERY, NULL);
+    struct statement *node = container_of(astnode, struct statement, _astnode);
+    astnode->children[child_index(astnode, node->body)] = body;
+    cypher_ast_free(node->body);
+    node->body = body;
+}
+
+
 cypher_astnode_t *clone(const cypher_astnode_t *self,
         cypher_astnode_t **children)
 {
